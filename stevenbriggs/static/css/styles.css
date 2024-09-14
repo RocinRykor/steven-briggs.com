@@ -1,0 +1,53 @@
+/* 1 || Universal */
+:root {
+  /* Colors */
+  --dark: #091833;
+  --medium: #133e7c;
+  --light: #0abdc6;
+  --primary-accent: #ea00d9;
+  --secondary-accent: #711c91;
+  --default-border-radius: 25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* Base */
+  background-color: var(--medium);
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  margin: 0 auto;
+}
+
+/* 5 || Headings */
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
