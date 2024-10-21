@@ -1,3 +1,37 @@
 <!DOCTYPE html>
 <footer class="page-footer">
+	<p>Find me on</p>
+	<section class="social-media">
+		<a href="https://github.com/RocinRykor" target="_blank"
+			><img
+				src="{{url_for('static', filename='img/svg/github.svg')}}"
+				alt="Link to Steven's Github page"
+				width="32px"
+                height="32px"
+		/></a>
+		<a href="https://bsky.app/profile/rocin-rykor.bsky.social" target="_blank"
+			><img
+				src="{{url_for('static', filename='img/svg/bluesky.svg')}}"
+				alt="Link to Steven's BlueSky Page"
+				width="32px"
+                height="32px"
+		/></a>
+		<a href="https://www.linkedin.com/in/stevenbriggs369/" target="_blank"
+			><img
+				src="{{url_for('static', filename='img/svg/linkedin.svg')}}"
+				alt="Link to Steven's LinkedIn profile"
+				width="32px"
+                height="32px"
+		/></a>
+	</section>
+	<p>
+		© Steven Briggs 2024
+{#		<!-- User -->#}
+{#		{% if current_user.is_authenticated %}#}
+{#		<a href="/logout">  | {{current_user.username}} </a>#}
+{#		{% else %}#}
+{#		<a href="/login" title="Login User"> | Admin Login </a>#}
+{#		{% endif %}#}
+{#		<!-- End User -->#}
+	</p>
 </footer>

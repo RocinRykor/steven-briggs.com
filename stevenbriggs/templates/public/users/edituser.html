@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "public/partials/base.html" %} {% block main %}
+
+<div class="container">
+    <form action="/user/edit/" id="edituser" name="edituser" method="post">
+        {{form.csrf_token}}
+        <div class="wtform_field row">
+            {{form.name.label(class_="col-1")}} {{form.name}}
+        </div>
+        <br />
+        <div class="wtform_field row">
+            {{form.bio.label(class_="col-1")}} {{form.bio}}
+        </div>
+        {{form.submit}}
+    </form>
+</div>
+
+{% endblock %}

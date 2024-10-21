@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 {% extends "public/partials/base.html" %} {% block main %}
 
-<h2>This is the main block on the Example page</h2>
+<div class="container">
+    {% include "public/users/partials/signup_form.html" %}
+</div>
 
 {% endblock %}

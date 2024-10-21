@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<div class="tech-card" data-tech="{{ tech.name }}">
+    <div class="icons">
+        {% for icon in tech.icons %} {% with icon=icon %}
+        <div class="icon"><img src={{ url_for('static', filename='img/svg/' ~ icon) }} alt='{{ name }}'></div>
+        {% endwith %} {% endfor %}
+    </div>
+  <div class="name">{{ tech.name }}</div>
+  <div class="info">{{ tech.description }}</div>
+</div>

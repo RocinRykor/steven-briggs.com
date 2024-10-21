@@ -1,0 +1,183 @@
+[
+  {
+    "description": "Well this should look familiar as you are already here, but let me give you some background information about one of my very first projects!\n\n Several years ago, when I first started to teach myself programming, I knew that I was going to want a portfolio site to showcase my work. At the time, it was mostly for personal satisfaction that I planned on doing this, but when I opted to trying for a career in web-development and joining the CareerFoundry course is seemed quite apropos that I could use my personal portfolio site to help me branch into a new career. \n\nThere is more that I want to add to this site eventually, along with hosting my projects and information about myself, I am looking to also make this a site of self-reflection with journals/blog posts.",
+    "id": 1,
+    "img_filename": "RRProjects.png",
+    "live_link": "https://rrprojects.studio/",
+    "live_link_description": "View the live version here!",
+    "repo_link": "https://github.com/RocinRykor/rrprojects.studio",
+    "repo_link_description": "Check out the project on GitHub!",
+    "short_description": "My very first website and used to showcase my skills and display the projects I am most proud of.",
+    "title": "RR Projects Website",
+    "techs": [
+      {
+        "name": "HTML, CSS, and Bootstrap",
+        "description": "As with any site uses HTML and CSS for main content delivery. Plus uses the framework bootstrap for a bit of consistency between page elements and a responsive design.",
+        "icons": ["html.svg", "css.svg", "bootstrap.svg"]
+      },
+      {
+        "name": "Python/Flask",
+        "description": "This site is built as a web application using Flask, with Python as the backbone to the library. This allows me to easily scale the website as need adding more complex functions via the use of various libraries, such as Jinja2 which allows me to build dynamic HTML pages using a template system.",
+        "icons": ["python.svg", "flask.svg"]
+      }
+    ]
+  },
+  {
+    "description": "Oi Chummers, Welcome to the streets of Seattle, grab a soykaf and watch the latest trids. \n\nFor those who are unfamiliar with the game, Shadowrun is a Tabletop-RPG (think Dungeons and Dragons), set in the near future with a fantasy-cyberpunk theme. It has your usual assortment of fantasy elements, elves, dwarves, orks, and trolls, magic and dragons, as well as futuristic sci-fi with the Matrix and Mega-corporations.\n\n One of my first Java projects was a Discord bot that allowed my friends and I to roll virtual dice quickly and easily, and integrate that into our tabletop games that we would play over Discord. When my friends and I started playing Shadowrun 3e, we added more game specific features to the bot and set about trying to make our own character generators and managers (as 3e is an older edition and digital tools for the game are sparse compared to newer editions). Recently I decided it would be best to move such features to their own site so that they can be accessed even without the Discord bot, giving us more options in the future. ",
+    "id": 2,
+    "img_filename": "SixthWorldSprawl.png",
+    "live_link": "https://sixthworldsprawl.com/",
+    "live_link_description": "View the live version here!",
+    "repo_link": "https://github.com/RocinRykor/sixthworldsprawl.com",
+    "repo_link_description": "Check out the project on GitHub!",
+    "short_description": "A website for the Tabletop-RPG Shadowrun 3rd Edition: this personal project site to help my friends and I play our campaigns, as well as showcase our characters and in-game moments for anyone who might be interested.",
+    "title": "Sixth-World Sprawl",
+    "techs": [
+      {
+        "name": "HTML, CSS, and Bootstrap",
+        "description": "As with any site uses HTML and CSS for main content delivery. Plus uses the framework bootstrap for a bit of consistency between page elements and a responsive design.",
+        "icons": ["html.svg", "css.svg", "bootstrap.svg"]
+      },
+      {
+        "name": "Javascript",
+        "description": "There are many features on the site that allow the user to randomly generate results based on in-game rules, such as dice rolls or generating appropriate in-game matrix hosts and security. These generators use Javascript to quickly perform the calculations and modify the page to return the results. ",
+        "icons": ["javascript.svg"]
+      },
+      {
+        "name": "Python/Flask",
+        "description": "This site is built as a web application using Flask, with Python as the backbone to the library. This allows me to easily scale the website as need adding more complex functions via the use of various libraries, such as Jinja2 which allows me to build dynamic HTML pages using a template system.",
+        "icons": ["python.svg", "flask.svg"]
+      },
+      {
+        "name": "MariaDB",
+        "description": "Utilizes a back-end database running on MariaDB in order to manage and maintain aspects of the site such as registered users/admins and the characters that are displayed. Information from this database can either be accessed in the site, such as the characters page, or via the site's API.",
+        "icons": ["mariadb.svg"]
+      }
+    ]
+  },
+  {
+    "description": "\"Gotta Catch em All!\" is admittedly is a lot easier when you can just request em all through an API.\n\n This was one of the first projects that I built through the CareerFoundry program and serves as my introduction to Javascript.\n\nWhile nothing here is complex or particularly impressive, it serves as a stepping stone of sorts, it was my first time working with Javascript. I am proud of how it came out and the design I was able to come up with for the page.\n\nIn the future I may go back to this app and update it and add more features to it, but for now I like the reminder of where I started this particular journey.",
+    "id": 3,
+    "img_filename": "js-pokedex.png",
+    "live_link": "https://rocinrykor.github.io/pokedex-js/",
+    "live_link_description": "View the live version here!",
+    "repo_link": "https://github.com/RocinRykor/pokedex-js",
+    "repo_link_description": "Check out the project on GitHub!",
+    "short_description": "One of the first projects I built through CareerFoundry.\nA simple app that pulls Pokemon information from an existing API",
+    "title": "Simple JS Pokedex App",
+    "techs": [
+      {
+        "name": "HTML, CSS, and Bootstrap",
+        "description": "This app is designed to be be super minimal using basic HTML with some CSS styling",
+        "icons": ["html.svg", "css.svg", "bootstrap.svg"]
+      },
+      {
+        "name": "Javascript",
+        "description": "The backbone of this particular app. Uses Javascript to access the Pokedex API and populate the page from the information that it gathered.",
+        "icons": ["javascript.svg"]
+      }
+    ]
+  },
+  {
+    "description": "IMDB... just smaller.\n\n The second of my CareerFoundry projects, this app was built in two parts. First a database was create to house user and movie information, along with an API to retrieve said info. Next the client was built to allow users to interact with the database, select their favorite movies and so on.\n\nWhile I have worked with various components from this project before such as Bootstrap or working with databases in general, this was the first time I worked with the react-bootstrap library as well as MongoDB in particular, both of which was fairly pleasant to work with",
+    "id": 4,
+    "img_filename": "MyMov.png",
+    "live_link": "https://rocin-mymov.netlify.app/",
+    "live_link_description": "View the live version here!",
+    "repo_link": "https://github.com/RocinRykor/myMov-client",
+    "repo_link_description": "Check out the project on GitHub!",
+    "short_description": "Second CareerFoundry Project, this time a two part system.\nCreate a movie API, and then create a client based on that API",
+    "title": "MyMov API and Client",
+    "techs": [
+      {
+        "name": "HTML, CSS, and Bootstrap",
+        "description": "As with any site uses HTML and CSS for main content delivery. This particular project used the react-bootstrap library for implementing Bootstrap.",
+        "icons": ["html.svg", "css.svg", "bootstrap.svg"]
+      },
+      {
+        "name": "Javascript/React",
+        "description": "Used as the backbone for the client side.",
+        "icons": ["javascript.svg", "react.svg"]
+      },
+      {
+        "name": "NodeJS",
+        "description": "Used to create the API that would retrieve movie and user information.",
+        "icons": ["node-js.svg"]
+      },
+      {
+        "name": "MongoDB",
+        "description": "Used to store user and movie information.",
+        "icons": ["mongodb.svg"]
+      }
+    ]
+  },
+  {
+    "description": "Meet Up... Meet App... get it?.\n\n The third of my CareerFoundry projects, this time the API was built for us, we just needed to interact with it. This particular project was out first foray into test-driven development, serverless deployment, and progressive web applications.\n\nOn the surface everything done for this project is stuff that I have used for other projects, behind the veil the inclusion of things like the unit-tests made the entire experience different and a bit of a challenge.",
+    "id": 5,
+    "img_filename": "MeetApp.png",
+    "live_link": "https://rocinrykor.github.io/MeetApp/",
+    "live_link_description": "View the live version here!",
+    "repo_link": "https://github.com/RocinRykor/MeetApp",
+    "repo_link_description": "Check out the project on GitHub!",
+    "short_description": "Third CareerFoundry Project, view events from around the globe by taking advantage of Google's Calendar API",
+    "title": "Meet App",
+    "techs": [
+      {
+        "name": "Javascript/React",
+        "description": "Used as pretty much the backbone for the entire project.",
+        "icons": ["javascript.svg", "react.svg"]
+      }
+    ]
+  },
+  {
+    "description": "No jokes, just a little chat messenger.\n\n The fourth of my CareerFoundry projects, the Chat App was built as an app for Mobile Devices using React Native.\n\nThe database for the conversations was stored in Google's Firebase",
+    "id": 6,
+    "img_filename": "chatapp.jpg",
+    "live_link": "",
+    "live_link_description": "No live version available",
+    "repo_link": "https://github.com/RocinRykor/Chat-App",
+    "repo_link_description": "Check out the project on GitHub!",
+    "short_description": "Fourth CareerFoundry Project, a simple messenger app built for mobile devices in React Native",
+    "title": "Chat App",
+    "techs": [
+      {
+        "name": "Javascript/React Native",
+        "description": "Backbone of the project, React native allowed for creation of a native mobile app.",
+        "icons": ["javascript.svg", "react.svg"]
+      },
+      {
+        "name": "Gifted Chat",
+        "description": "This popular chat UI library served for creating the basic foundation of the chat app",
+        "icons": []
+      },
+      {
+        "name": "Google Firebase",
+        "description": "Uses the Cloud Firestore database to house and sync data between the clients of the chat app.",
+        "icons": ["firebase.svg"]
+      }
+    ]
+  },
+  {
+    "description": "Why the name change? I'm sure there is a good reason.\n\n The fifth of my CareerFoundry projects, we return to the myMov project we created earlier and recreate it with Angular.",
+    "id": 7,
+    "img_filename": "myFlixAngular.png",
+    "live_link": "https://rocinrykor.github.io/myFlix-Angular-client/welcome",
+    "live_link_description": "View the live version here!",
+    "repo_link": "https://github.com/RocinRykor/myFlix-Angular-client",
+    "repo_link_description": "Check out the project on GitHub!",
+    "short_description": "Fifth CareerFoundry Project, working off the myMov data and API, this time with Angular",
+    "title": "myFlix Angular Client",
+    "techs": [
+      {
+        "name": "Typescript/Angular",
+        "description": "Backbone of the project, served as an introduction to typescript and used the Angular Material UI",
+        "icons": ["typescript.svg", "angular.svg"]
+      },
+      {
+        "name": "MongoDB",
+        "description": "Used to store user and movie information.",
+        "icons": ["mongodb.svg"]
+      }
+    ]
+  }
+]

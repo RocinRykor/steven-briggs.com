@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<div class="grid__item">
+    <div class="card-main">
+        <img
+                src="/static/img/projects/{{ project['img_filename'] }}"
+                alt="{{ project.title }} Image"
+                class="card-img project-image-sm"/>
+
+        <h2 class="project-title">{{ project.title }}</h2>
+    </div>
+    <div class="card-desc">
+        <p class="project-short-desc">{{ replace_func(project.short_description) | safe }}
+            <p>Built Using:</p>
+        <ul class="project-tech-list">
+            {% for tech in project.techs %} {% with tech=tech %}
+                <li class="project-tech-item"> {{ tech.name }}</li>
+            {% endwith %} {% endfor %}
+        </ul>
+    </div>
+
+    <div class="card-links">
+        <a href="{{ project.id }}" class="grid-link">Click here to learn more!</a>
+        <br/>
+        <a href="{{ project.live_link }}" target="_blank" class="grid-link"
+        >{{ project.live_link_description }}</a
+        >
+        <br/>
+        <a href="{{ project.repo_link }}" target="_blank" class="grid-link"
+        >{{ project.repo_link_description }}</a
+        >
+    </div>
+
+</div>

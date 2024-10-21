@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "public/partials/base.html" %} {% block main %}
+
+    <div class="container">
+        <div class="centered">
+            <img
+                    src="/static/img/projects/{{ project['img_filename'] }}"
+                    alt="{{ project.title }} Image"
+                    class="project-image"/>
+            <div class="row">
+                <h1>{{ project.title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <p>{{ replace_func(project.description) | safe }}</p>
+        </div>
+
+        <div class="tech-list tech-grid">
+            {% for tech in project.techs %} {% with tech=tech %}
+                {% include
+	"public/projects/partials/tech_card.html" %}
+            {% endwith %} {% endfor %}
+        </div>
+
+        <div class="project-links row">
+            <a href="{{ project.live_link }}" target="_blank" class="col-sm-5 btn btn-primary btn-lg"
+            >{{ project.live_link_description }}</a
+            >
+            <div class="empty-space col-sm-2"></div>
+            <a href="{{ project.repo_link }}" target="_blank" class="col-sm-5 btn btn-info btn-lg"
+            >{{ project.repo_link_description }}</a
+            >
+        </div>
+    </div>
+
+{% endblock %}

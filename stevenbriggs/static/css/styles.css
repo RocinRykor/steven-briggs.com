@@ -1,53 +1,466 @@
-/* 1 || Universal */
+/* 1 || Universal*/
 :root {
-  /* Colors */
-  --dark: #091833;
-  --medium: #133e7c;
-  --light: #0abdc6;
-  --primary-accent: #ea00d9;
-  --secondary-accent: #711c91;
-  --default-border-radius: 25px;
+    /* Steel Blue Palette */
+    --dark: #1b3246;
+    --medium: #4682b4;
+    --light: #b2cce1;
+
+    --primary-accent: #b4af46;
+    --secondary-accent: #b4464b;
+
+    --default-border-radius: 25px;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+/* 2 || Document */
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
+/* 3 || Metadata */
+
+/* 4 || Sections */
 body {
-  /* Base */
-  background-color: var(--medium);
-  color: white;
-  font-family: 'Dosis', sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+    /* Base || Colors*/
+    background-color: var(--light);
+    color: black;
+
+    /* || Fonts*/
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
+    letter-spacing: 1px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 /* 5 || Headings */
-h1, h2, h3 {
-  font-weight: 500;
-}
-
 h1 {
-  font-size: 30px;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 h2 {
-  font-size: 24px;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 h3 {
-  font-size: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* 6 || Lists */
+/* 7 || Media */
+
+/* 8 || Forms */
+.button,
+button {
+    /* overwrites browser defaults */
+    /* resets the border */
+    border: none;
+    display: inline-block;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* style button */
+    background-color: var(--dark);
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    /* width of the border, type, color */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 1s opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 75% */
+    opacity: 0.75;
+}
+
+/* 9 || Tables */
+
+/* 10 || Phrasing */
+a {
+    color: var(--dark);
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+}
+
+a:hover {
+    /* background: var(--primary-accent); */
+    color: black;
+}
+
+.navlink:hover {
+    border-top: 2px solid var(--secondary-accent);
+    border-bottom: 2px solid var(--secondary-accent);
+    color: var(--primary-accent);
+    background: none;
+    transition: .25s;
+}
+
+/* 11 || Misc. */
+
+/*12 || Attributes */
+/* Section || Page Header*/
+
+.page-header {
+    background-color: var(--dark);
+    color: white;
+    display: flex;
+    width: 100%;
+    padding: 0px 25px 0px 25px;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+    color: white;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+/* Page Header || Navigation*/
+.navigation-list {
+    padding-top: 20px;
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.navlink {
+    font-size: 24px;
+    color: var(--light);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.button-dropdown {
+    background-color: var(--dark);
+    color: var(--light);
+    margin: 0;
+    font-size: 24px;
+    border-bottom: 0px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--light);
+    min-width: 60px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: var(--dark);
+    padding: 16px 16px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .button-dropdown {
+    background-color: var(--primary-accent);
+    color: var(--dark);
+}
+
+/* Section || Body */
+.content {
+    flex: 1 0 auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Section || Footer */
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Main || Portrait */
+.profile_portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+/* Main || Experience Table */
+.experience {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.experience-table {
+    margin: 0px auto;
+    width: 25%;
+}
+
+.profile-main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main || Grids*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display 4 cards per line */
+    grid-gap: 20px;
+    padding: 0px 25px 0px 25px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Specific with techs to ensure it looks right */
+    grid-gap: 20px;
+    padding: 0px 25px 0px 25px;
+}
+
+.grid__item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--medium);
+    opacity: 100%;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+
+    /* Start styling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.grid__item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-link {
+    color: white;
+}
+
+.card-main {
+    text-align: center;
+}
+
+.card-img {
+    text-align: center;
+    align-items: center;
+    height: 100%; /* Make the image take full height of the card */
+    width: 100%; /* Make the image take full width of the card */
+    object-fit: cover;
+    border-bottom: black 3px;
+}
+
+.card-desc {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.project-title {
+    padding-top: 10px; /* Add desired padding value */
+}
+
+.project-short-desc {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+.project-image,
+.project-image-xs,
+.project-image-sm,
+.project-image-med {
+    object-fit: cover;
+}
+
+
+.project-image {
+    /* Full Size */
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+}
+
+.project-image-med {
+    /* 75% Size */
+    height: 375px;
+    width: 375px;
+}
+
+.project-image-sm {
+    /* 50% Size */
+    height: 250px;
+    width: 1fr;
+}
+
+.project-image-xs {
+    /* 25% Size */
+    height: 125px;
+    width: 125px;
+}
+
+.name-title {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.card-links {
+    text-align: center;
+    margin-top: auto;
+}
+
+
+/* Techs */
+.tech-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tech-card {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+    background-color: #eee;
+    border-radius: var(--default-border-radius);
+    overflow: hidden;
+}
+
+.tech-card:hover {
+    background-color: var(--medium);
+    color: white;
+}
+
+.tech-card:hover .name {
+    display: none;
+}
+
+.tech-card:hover .icon {
+    display: none;
+}
+
+
+.tech-card:hover .info {
+    display: block;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 25%;
+}
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.info {
+    display: none;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.project-links {
+    padding-top: 50px;
+}
+
+/* Base || Media */
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
 }

@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 {% extends "public/partials/base.html" %} {% block main %}
 
-        <h1> Hello World!</h1>
-
-    <p>Welcome to the new site for Steven Briggs</p>
-
-    <h3>WIP - Website under construction - check back later</h3>
+<main class="profile-main">
+	<img
+		src="{{url_for('static', filename='img/steven-briggs-profile-pic.jpg')}}"
+		class="profile_portrait"
+		alt="Steven Briggs' Portrait" />
+	<h1>Hello World!</h1>
+	<p>
+		My name is Steven Briggs. I am a hobbyist web developer and programmer from
+		Washington.
+	</p>
+	<a href="/project">Check out some of my projects</a>
+</main>
 
 {% endblock %}

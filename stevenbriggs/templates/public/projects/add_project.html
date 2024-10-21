@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% extends "public/partials/base.html" %} {% block main %}
+
+<h1 class="centered">Add a Project!</h1>
+
+<form
+	action="/project/add"
+	id="project_add"
+	name="project_add"
+	method="post"
+	enctype="multipart/form-data">
+	{{form.csrf_token}}
+	<div class="container">
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-6">
+					{{form.title.label}}{{form.title(class_="form-control",
+					size=32, maxlength=64)}}
+				</div>
+				<div class="col-sm-6">
+					{{form.img_filename.label}}
+					{{form.img_filename(class_="form-control", size=32,
+					maxlength=128)}}
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-6">
+					{{form.repo_link.label}}
+					{{form.repo_link(class_="form-control", size=32,
+					maxlength=256)}}
+				</div>
+				<div class="col-sm-6">
+					{{form.repo_link_description.label}}
+					{{form.repo_link_description(class_="form-control", size=32,
+					maxlength=256)}}
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-6">
+					{{form.live_link.label}}
+					{{form.live_link(class_="form-control", size=32,
+					maxlength=256)}}
+				</div>
+				<div class="col-sm-6">
+					{{form.live_link_description.label}}
+					{{form.live_link_description(class_="form-control", size=32,
+					maxlength=256)}}
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				{{form.short_description.label}}
+				{{form.short_description(class_="form-control", rows=5,
+				maxlength=1024)}}
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="row">
+				{{form.description.label}}
+				{{form.description(class_="form-control", rows=10,
+				maxlength=8192)}}
+			</div>
+		</div>
+		{{form.submit}}
+	</div>
+</form>
+
+{% endblock %}
