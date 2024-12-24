@@ -1,0 +1,1 @@
+pip install flask flask-login flask-migrate flask-sqlalchemy flask-statgraph flask-wtf nh3 pygithub pymysql
