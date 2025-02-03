@@ -5,7 +5,7 @@ from werkzeug.security import check_password_hash
 
 from stevenbriggs import models
 from stevenbriggs.app import db
-from stevenbriggs.forms import LoginForm
+from stevenbriggs.forms import LoginForm, UserForm
 
 User = models.User
 
@@ -17,8 +17,6 @@ def login():
     # Make sure the form validates
     form = LoginForm(request.form)
     if not form.validate():
-        # flash("Invalid form data", "error")
-        flash_form_errors(form, "error")
         return render_template("public/users/login.html", title="Admin Login",
                                form=form)
 
@@ -64,3 +62,34 @@ def logout():
     logout_user()
     db.session.commit()
     return redirect("/")
+
+
+@auth.route("/signup/")
+def signup():
+    form = UserForm()
+    return render_template("public/users/signup.html", form=form)
+
+
+@auth.route("/signup-form/")
+def signup_form():
+    form = UserForm()
+    return render_template("public/users/partials/signup_form.html", form=form)
+
+
+@auth.route("/signup/", methods=['POST'])
+def finish_signup():
+    form = UserForm(request.form)
+    username = form.name.data
+    password = form.password.data
+    confirmation = form.confirmation.data
+
+    if not (password == confirmation):
+        flash("Password does not match confirmation", "error")
+        return render_template("public/users/signup.html", form=form)
+
+    user = User(username=username, is_admin=True)
+    user.set_password(password)
+
+    db.session.add(user)
+    db.session.commit()
+    return redirect("/login/")

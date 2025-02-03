@@ -1,5 +1,6 @@
 from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash
 
 db = SQLAlchemy()
 
@@ -110,6 +111,7 @@ class BlogPost(db.Model):
     | created_at:    A datetime object representing the date and time the blog post was created
     | updated_at:    A datetime object representing the date and time the blog post was last updated
     | is_private:    Whether the blog post will be marked as private (won't be viewable anyone not logged in)
+    | is_super_private: Whether the blog post will be marked as super private (won't be viewable anyone not logged in as the original author)
     """
 
     id = db.Column(db.Integer, primary_key=True)
@@ -120,6 +122,7 @@ class BlogPost(db.Model):
     created_at = db.Column(db.DateTime, nullable=False)
     updated_at = db.Column(db.DateTime, nullable=False)
     is_private = db.Column(db.Boolean)
+    is_super_private = db.Column(db.Boolean)
 
     def jsonify(self):
         """

@@ -464,3 +464,82 @@ a:hover {
         font-size: 22px;
     }
 }
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background: linear-gradient(to right, var(--medium) 15%, #f4f4f4 50%); /* Split green and white */
+    background-size: 100% 100%;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    overflow: hidden;
+    transition: background 5s ease-in-out, transform 5s ease-in-out, box-shadow 5s ease-in-out;
+}
+
+.link-card:hover {
+    background: linear-gradient(to right, var(--medium) 15%, #f4f4f4 100%); /* Fully green gradient */
+    background-size: 100% 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.link-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.link-card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 0;
+    border-radius: 50%;
+    padding: 1px;
+    background: var(--light); /* Match the left background color */
+    z-index: 2; /* Keeps it above the backgrounds */
+}
+
+.link-card .diagonal-line {
+    width: 5px;
+    height: 180%;
+    background: #333;
+    transform: rotate(15deg);
+    position: absolute;
+    left: 85px; /* Starts near the icon */
+    z-index: 1;
+    transition: left .5s ease-in-out, opacity .5s ease-in-out; /* Smooth movement and disappearance */
+}
+
+.link-card:hover .diagonal-line {
+    left: 100%; /* Moves to the far right */
+    opacity: 0; /* Disappears at the end */
+}
+
+.link-card span {
+    flex: 1;
+    text-align: center;
+    z-index: 2; /* Above backgrounds and diagonal line */
+    padding-left: 10px; /* Separate the text slightly from the diagonal line */
+    font-size: 1.5rem;
+;
+    font-weight: 600;
+    color: #333;
+}

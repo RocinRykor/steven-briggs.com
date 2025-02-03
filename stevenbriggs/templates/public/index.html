@@ -1,17 +1,59 @@
 <!DOCTYPE html>
-{% extends "public/partials/base.html" %} {% block main %}
+{% extends "public/partials/base.html" %}
+{% block main %}
 
 <main class="profile-main">
-	<img
-		src="{{url_for('static', filename='img/steven-briggs-profile-pic.jpg')}}"
-		class="profile_portrait"
-		alt="Steven Briggs' Portrait" />
-	<h1>Hello World!</h1>
-	<p>
-		My name is Steven Briggs. I am a hobbyist web developer and programmer from
-		Washington.
-	</p>
-	<a href="/project">Check out some of my projects</a>
+    <img
+        src="{{url_for('static', filename='img/steven-briggs-profile-pic.jpg')}}"
+        class="profile_portrait"
+        alt="Steven Briggs' Portrait" />
+    <h1>Hello World!</h1>
+    <h3>
+        My name is Steven Briggs. I am a hobbyist web developer and programmer from
+        Washington.
+    </h3>
+
+    <p>
+        Click the links below to follow me on various platforms.
+    </p>
+
+<div class="links-container">
+    <div class="link-card">
+        <a href="https://github.com/RocinRykor" target="_blank">
+            <img src="{{ url_for('static', filename='img/svg/github.svg') }}" alt="GitHub" />
+            <div class="diagonal-line"></div>
+            <span>GitHub</span>
+        </a>
+    </div>
+    <div class="link-card">
+        <a href="https://bsky.app/profile/rocin-rykor.bsky.social" target="_blank">
+            <img src="{{ url_for('static', filename='img/svg/bluesky.svg') }}" alt="Bluesky" />
+            <div class="diagonal-line"></div>
+            <span>Bluesky</span>
+        </a>
+    </div>
+    <div class="link-card">
+        <a href="https://www.linkedin.com/in/stevenbriggs369/" target="_blank">
+            <img src="{{ url_for('static', filename='img/svg/linkedin.svg') }}" alt="LinkedIn" />
+            <div class="diagonal-line"></div>
+            <span>LinkedIn</span>
+        </a>
+    </div>
+    <div class="link-card">
+        <a href="https://www.discordapp.com/users/135822041164152833" target="_blank">
+            <img src="{{ url_for('static', filename='img/svg/discord.svg') }}" alt="Discord" />
+            <div class="diagonal-line"></div>
+            <span>Discord</span>
+        </a>
+    </div>
+    <div class="link-card">
+        <a href="/project" target="_blank">
+            <img src="{{ url_for('static', filename='img/svg/react.svg') }}" alt="Projects" />
+            <div class="diagonal-line"></div>
+            <span>My Projects</span>
+        </a>
+    </div>
+</div>
 </main>
 
 {% endblock %}
