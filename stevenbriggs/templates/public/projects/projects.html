@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 {% extends "public/partials/base.html" %} {% block main %}
-<div class="centered">
-	<h1>My Projects!</h1>
-{#	{% if current_user.is_admin %}#}
-{#	<a href="{{url_for('project.get_add_project')}}" class="btn btn-secondary"#}
-{#		>Submit New Project</a#}
-{#	>{% endif %}#}
-</div>
 
-<div class="project-list grid">
-	{% for project in projects %} {% with project=project %} {% include
-	"public/projects/partials/project_card.html" %} {% endwith %} {% endfor %}
-</div>
+    <main class="main-left-aligned centered">
+        <h1>My Projects!</h1>
+
+        <!-- Temporary Update Notice -->
+        <div class="update-notice">
+            <h2>🚧 Portfolio Under Construction 🚧</h2>
+            <p>
+                I'm currently working on a brand-new batch of projects to showcase!
+                <br>
+                The previous projects have been retired to make space for fresh work.
+            </p>
+            <p>
+                Please check back soon to see:
+            </p>
+            <ul>
+                <li>New interactive applications</li>
+                <li>Updated case studies</li>
+                <li>Improved code examples</li>
+            </ul>
+            <p class="highlight">
+                Expected completion: Fall 2023
+            </p>
+
+
+            <p class="highlight">
+                In the meantime, you can still check out my work on
+                <a href="https://github.com/RocinRykor" target="_blank"
+                ><img
+                        src="{{ url_for('static', filename='img/svg/github.svg') }}"
+                        alt="Link to Steven's Github page"
+                        width="32px"
+                        height="32px"
+                /></a>
+            </p>
+        </div>
+
+        <!-- Removed project grid -->
+    </main>
 
 {% endblock %}

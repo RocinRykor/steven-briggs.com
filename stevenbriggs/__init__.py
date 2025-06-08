@@ -1,7 +1,7 @@
 import os
 import sys
 from . import app
-models = app.models
+
 db = app.db
 
 # This site was started on 2020-03-25
